@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #include<time.h>
 SceneID scene1;
-ObjectID card[52], goButton1, goButton2, goButton3, stopButton, outButton, startButton, back[7], ruleButton, rule, caution;
+ObjectID card[52], goButton1, goButton2, goButton3, stopButton, outButton, startButton, back[7], ruleButton, rule;
 int sum;
 int dealerSum;
 const char* card_image[52] = {
@@ -222,13 +222,8 @@ int main() {
 	stopButton = createObject("stop.jpg");
 	outButton = createObject("out.jpg");
 	startButton = createObject("start.jpg");
-	caution = createObject("caution.jpg");
-	for (int i = 0; i < 52; i++) {
-		card[i] = createObject(card_image[i]);
-	}
-	for (int n = 0; n < 7; n++) {
-		back[n] = createObject("뒷면.jpg");
-	}
+	for (int i = 0; i < 52; i++) {card[i] = createObject(card_image[i]);}
+	for (int n = 0; n < 7; n++) {back[n] = createObject("뒷면.jpg");}
 	locateObject(startButton, scene1, 500, 100);
 	locateObject(outButton, scene1, 0, 600);
 	locateObject(goButton1, scene1, 300, 30);
@@ -244,8 +239,6 @@ int main() {
 	locateObject(back[6], scene1, 630, 500);
 	locateObject(ruleButton, scene1, 100, 600);
 	locateObject(rule, scene1, 0, 0);
-	locateObject(caution, scene1, 0, 500);
-
 	showObject(caution);
 	showObject(startButton);
 	showObject(outButton);
