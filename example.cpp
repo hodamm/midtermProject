@@ -239,9 +239,9 @@ int main() {
 	locateObject(back[6], scene1, 630, 500);
 	locateObject(ruleButton, scene1, 100, 600);
 	locateObject(rule, scene1, 0, 0);
-	showObject(caution);
 	showObject(startButton);
 	showObject(outButton);
 	showObject(ruleButton);
+	showObject(rule);
 	startGame(scene1);
 }
